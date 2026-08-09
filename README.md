@@ -25,7 +25,9 @@ In simple terms:
 
 ## Architecture
 
-Architecture diagram coming soon.
+Live exchange data is collected, normalized, compared in real time, and stored when meaningful spread events are detected.
+
+![Market Data Analysis System Architecture](docs/architecture.png)
 
 ---
 
