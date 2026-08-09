@@ -10,6 +10,16 @@ Instead of manually checking prices, the system connects to several exchanges at
 
 ---
 
+## Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![asyncio](https://img.shields.io/badge/asyncio-2C2D72?style=for-the-badge)
+![WebSockets](https://img.shields.io/badge/WebSockets-010101?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+---
+
 ## What Does It Do?
 
 In simple terms:
@@ -57,6 +67,8 @@ A simplified example looks like this:
 | ZBTUSDT | OKX | Binance | 0.314% | 0.461% | 30 ms |
 | SPKUSDT | Binance | OKX | 0.348% | 0.418% | 21 ms |
 
+Duration shows how long the detected price difference remained active.
+
 Two sample datasets are included:
 
 - [`Recruiter-friendly sample`](sample_data/spread_events_recruiter_sample.csv) — simplified fields for quick understanding.
@@ -68,26 +80,12 @@ More information about the datasets is available in [`sample_data/README.md`](sa
 
 ## Deployment
 
-The system was tested on VPS servers in:
+The system was deployed and tested on VPS servers in multiple Asian regions:
 
-- Tokyo
-- Singapore
-- Hong Kong
+- 🇯🇵 Tokyo
+- 🇸🇬 Singapore
+- 🇭🇰 Hong Kong
 
-Different server locations were used to evaluate network latency and data delivery behaviour.
+Multiple locations were used to compare network latency and market-data delivery behaviour between regions.
 
----
-
-## Tech Stack
-
-- Python
-- asyncio
-- WebSockets
-- SQLite
-- Git
-
----
-
-## Example Output
-
-Sample output coming soon.
+This helped evaluate how server location affects real-time data collection and event detection.
