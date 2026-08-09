@@ -43,6 +43,29 @@ Live exchange data is collected, normalized, compared in real time, and stored w
 
 ---
 
+## Example Output
+
+The system records detected price-difference events so they can be analyzed later.
+
+A simplified example looks like this:
+
+| Market | Buy Exchange | Sell Exchange | Start Spread | Max Spread | Duration |
+|---|---|---|---:|---:|---:|
+| BEATUSDT | Binance | OKX | 0.467% | 0.467% | 38 ms |
+| JELLYJELLYUSDT | Binance | OKX | 0.314% | 0.703% | 26 ms |
+| SAPIENUSDT | OKX | Binance | 0.315% | 0.315% | 20 ms |
+| ZBTUSDT | OKX | Binance | 0.314% | 0.461% | 30 ms |
+| SPKUSDT | Binance | OKX | 0.348% | 0.418% | 21 ms |
+
+Two sample datasets are included:
+
+- [`Recruiter-friendly sample`](sample_data/spread_events_recruiter_sample.csv) — simplified fields for quick understanding.
+- [`Full technical sample`](sample_data/spread_events_full_sample.csv) — all recorded fields for deeper technical inspection.
+
+More information about the datasets is available in [`sample_data/README.md`](sample_data/README.md).
+
+---
+
 ## Deployment
 
 The system was tested on VPS servers in:
