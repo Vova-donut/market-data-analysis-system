@@ -1,0 +1,2 @@
+"""Market data collector package."""
+

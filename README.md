@@ -89,3 +89,92 @@ The system was deployed and tested on VPS servers in multiple Asian regions:
 Multiple locations were used to compare network latency and market-data delivery behaviour between regions.
 
 This helped evaluate how server location affects real-time data collection and event detection.
+
+---
+
+## Getting Started
+
+### Requirements
+
+- Python 3.10+
+- pip
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Vova-donut/market-data-analysis-system.git
+cd market-data-analysis-system
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+**macOS / Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+Install the required dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Create a local environment configuration from the provided example:
+
+**macOS / Linux**
+
+```bash
+cp .env.example .env
+```
+
+On Windows, copy `.env.example` and rename the copy to `.env`.
+
+The default configuration uses Binance and the standard public OKX WebSocket feed and does not require API credentials.
+
+Run the collector:
+
+```bash
+python -m src.main
+```
+
+### Optional OKX SBE Feed
+
+The project also supports the OKX SBE binary market-data feed.
+
+To enable it, update your `.env` file:
+
+```env
+OKX_USE_SBE=1
+OKX_API_KEY_PARSER=your_api_key
+OKX_SECRET_PARSER=your_secret_key
+OKX_PASSWORD_PARSER=your_passphrase
+```
+
+OKX API credentials are not included in this repository. Users must provide their own credentials.
+
+To use the standard public OKX WebSocket feed without API credentials, keep:
+
+```env
+OKX_USE_SBE=0
+```
+
+### Configuration
+
+Additional settings such as active exchanges, spread thresholds, baseline window, database path, and WebSocket behaviour can be configured through the `.env` file.
+
+See `.env.example` for the available configuration options.
